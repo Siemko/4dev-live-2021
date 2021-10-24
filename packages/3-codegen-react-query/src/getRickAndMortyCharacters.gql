@@ -1,0 +1,17 @@
+query getCharacters {
+  characters {
+    results {
+      name
+      status
+      species
+      origin {
+        name
+        dimension
+      }
+      location {
+        name
+        dimension
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+overwrite: true
+schema: "../backend/src/graphql/schema.gql"
+documents: "src/**/*.gql"
+generates:
+  src/generated/schema.tsx:
+    config:
+      noNamespaces: true
+      enumsAsTypes: true
+      withHOC: false
+      withComponent: false
+      withHooks: true
+      scalars:
+        DateTime: string
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

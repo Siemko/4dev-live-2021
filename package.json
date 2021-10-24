@@ -1,0 +1,11 @@
+{
+  "name": "4dev-live-2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "DG",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": ["packages/*"]
+  }
+}

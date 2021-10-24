@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@genql/cli": "^2.6.0",
+    "serverless-offline": "^8.2.0"
+  },
+  "dependencies": {
+    "@genql/runtime": "^2.6.0",
+    "graphql": "^15.6.1"
+  },
+  "scripts": {
+    "start": "serverless offline",
+    "prestart": "genql --endpoint http://localhost:7001/v1/graphql --output ./generated -H 'x-hasura-admin-secret: myadminsecretkey'"
+  }
+}

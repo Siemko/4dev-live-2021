@@ -1,0 +1,20 @@
+{
+  "name": "2-codegen-simple-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.2.1",
+    "@graphql-codegen/typescript": "^2.2.4",
+    "@graphql-codegen/typescript-resolvers": "^2.3.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "graphql": "^15.6.1"
+  },
+  "scripts": {
+    "prestart": "graphql-codegen",
+    "start": "tsnd --respawn index.ts"
+  }
+}

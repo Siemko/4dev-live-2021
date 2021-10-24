@@ -1,0 +1,16 @@
+{
+  "name": "0-standalone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "graphql": "^15.6.1"
+  },
+  "scripts": {
+    "start": "tsnd --respawn index.ts"
+  }
+}

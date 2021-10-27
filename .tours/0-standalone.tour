@@ -1,0 +1,46 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "0-standalone",
+  "steps": [
+    {
+      "file": "packages/0-standalone/package.json",
+      "description": "Używamy implementacji referencyjnej GraphQL.",
+      "line": 11
+    },
+    {
+      "file": "packages/0-standalone/index.ts",
+      "description": "Schema tworzona jest w języku SDL",
+      "line": 5
+    },
+    {
+      "file": "packages/0-standalone/index.ts",
+      "description": "Wraz z Schema, należy stworzyć także resolvery",
+      "line": 19
+    },
+    {
+      "file": "packages/0-standalone/index.ts",
+      "description": "lub jako złożenie obiektów klas dostarczanych przez implementację GQLa",
+      "line": 27
+    },
+    {
+      "file": "packages/0-standalone/index.ts",
+      "description": "w wspóldzielonym folderze zdefiniowane są 4 filmy",
+      "line": 22,
+      "selection": {
+        "start": {
+          "line": 22,
+          "character": 17
+        },
+        "end": {
+          "line": 22,
+          "character": 23
+        }
+      }
+    },
+    {
+      "file": "shared/movies.ts",
+      "description": "A propozycję tych filmów dostarcza GitHub Copilot",
+      "line": 9
+    }
+  ]
+}

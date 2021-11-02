@@ -1,5 +1,6 @@
 import { ApolloServer } from "apollo-server";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
+import { printSchema } from "graphql";
 import "reflect-metadata";
 import {
   buildSchema,
@@ -7,9 +8,10 @@ import {
   ID,
   ObjectType,
   Query,
-  Resolver
+  Resolver,
 } from "type-graphql";
 import { movies, TMovie } from "../../shared";
+import { writeFile } from "fs/promises";
 
 @ObjectType()
 class Movie implements TMovie {
@@ -35,12 +37,12 @@ class MovieResolver {
 class TextResolver {
   @Query(() => String)
   hello() {
-    return "world"
+    return "world";
   }
 
   @Query(() => String)
   hi() {
-    return "hello"
+    return "hello";
   }
 }
 
@@ -49,8 +51,8 @@ async function bootstrap() {
     resolvers: [MovieResolver, TextResolver],
   });
 
-  // const sdl = printSchema(schema);
-  // await writeFile(__dirname + '/schema.graphql', sdl);
+  const sdl = printSchema(schema);
+  await writeFile(__dirname + "/schema.graphql", sdl);
 
   const server = new ApolloServer({
     schema,

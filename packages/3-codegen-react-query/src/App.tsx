@@ -23,31 +23,33 @@ function App() {
         style={{ display: "flex", textAlign: "left", flexDirection: "column" }}
       >
         {error ? <span>Error occured</span> : null}
-        {data && data?.characters?.results?.length ?
-          data.characters.results.map((character, index) => (
-            <div
-              key={character!.name}
-              style={{
-                border: "1px solid white",
-                display: "flex",
-                flexDirection: "column",
-                flex: 1,
-                padding: "16px",
-              }}
-            >
-              <h1>
-                {index + 1}. {character!.name}
-              </h1>
-              <p>Status: {character!.status}</p>
-              <span>
-                Origin 🌍: {character!.origin?.name}, {character!.origin?.dimension}
-              </span>
-              <span>
-                Location 📌: {character!.location?.name},{" "}
-                {character!.location?.dimension}
-              </span>
-            </div>
-          )) : null}
+        {data && data?.characters?.results?.length
+          ? data.characters.results.map((character, index) => (
+              <div
+                key={character!.name}
+                style={{
+                  border: "1px solid white",
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1,
+                  padding: "16px",
+                }}
+              >
+                <h1>
+                  {index + 1}. {character!.name}
+                </h1>
+                <p>Status: {character!.status}</p>
+                <span>
+                  Origin 🌍: {character!.origin?.name},{" "}
+                  {character!.origin?.dimension}
+                </span>
+                <span>
+                  Location 📌: {character!.location?.name},{" "}
+                  {character!.location?.dimension}
+                </span>
+              </div>
+            ))
+          : null}
       </main>
     </div>
   );
